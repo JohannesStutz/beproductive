@@ -37,9 +37,9 @@ nb_path: "index.ipynb"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>The Python Website Blocker currently only works for Windows.</strong></p>
-<p>Download <code>blocker.py</code>, <code>pomodoro.py</code> and <code>blocklist.txt</code> and place them in the same directory.</p>
-<p>If you want to use Pomodoro, it's recommended to <code>pip install win10toast</code> for <a href="https://github.com/jithurjacob/Windows-10-Toast-Notifications">nice Windows notifications</a>.</p>
+<p>I'm working on making this program <code>pip</code> installable. In the meantime: download all files from the <code>beproductive</code> folder and place them in the same directory.</p>
+<p>If you want to use Pomodoro and use Windows, it's recommended to <code>pip install win10toast</code> for <a href="https://github.com/jithurjacob/Windows-10-Toast-Notifications">nice Windows notifications</a>.</p>
+<p><img src="/beproductive/pomodoro-notification.png" alt=""></p>
 <p>You don't have to install <code>win10toast</code>, but then you will not get visible and audible notifications for Pomodoro. All notifications are also printed in your command line tool however.</p>
 
 </div>
@@ -53,7 +53,7 @@ nb_path: "index.ipynb"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To run the blocker script, <strong>you have to run your command line tool with administrator privileges.</strong></p>
+<h3 id="Windows">Windows<a class="anchor-link" href="#Windows"> </a></h3><p>To run the blocker script, <strong>you have to run your command line tool with administrator privileges.</strong></p>
 <p>To block websites:</p>
 
 <pre><code>cd /directory/of/beproductive
@@ -61,6 +61,13 @@ python blocker.py block</code></pre>
 <p>To unblock all websites:</p>
 
 <pre><code>python blocker.py unblock</code></pre>
+<h3 id="Linux-(and-MacOS?)">Linux (and MacOS?)<a class="anchor-link" href="#Linux-(and-MacOS?)"> </a></h3><p>To block websites:</p>
+
+<pre><code>cd /directory/of/beproductive
+sudo python blocker.py block</code></pre>
+<p>To unblock all websites:</p>
+
+<pre><code>sudo python blocker.py unblock</code></pre>
 
 </div>
 </div>
@@ -68,10 +75,13 @@ python blocker.py block</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="How-to-Run-Pomodoro-Timer">How to Run Pomodoro Timer<a class="anchor-link" href="#How-to-Run-Pomodoro-Timer"> </a></h2><p>The <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro</a> feature blocks your defined websites for 25 minutes. It notifies you after the 25 minutes are over and gives you access to all websites for 5 minutes. Although I recommend getting up and stretching instead :) This cycle is repeated 4 times.</p>
-<p><strong>You have to run your command line tool with administrator privileges.</strong></p>
+<h3 id="Windows">Windows<a class="anchor-link" href="#Windows"> </a></h3><p><strong>You have to run your command line tool with administrator privileges.</strong></p>
 
 <pre><code>cd /directory/of/beproductive
-python pomodoro.py start</code></pre>
+python -m beproductive.pomodoro start</code></pre>
+<h3 id="Linux-(and-MacOS?)">Linux (and MacOS?)<a class="anchor-link" href="#Linux-(and-MacOS?)"> </a></h3>
+<pre><code>cd /directory/of/beproductive
+sudo python -m beproductive.pomodoro start</code></pre>
 
 </div>
 </div>

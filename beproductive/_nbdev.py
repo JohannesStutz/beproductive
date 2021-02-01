@@ -5,16 +5,17 @@ __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 index = {"APP_NAME": "00_blocker.ipynb",
          "REDIRECT": "00_blocker.ipynb",
          "WIN_PATH": "00_blocker.ipynb",
+         "LINUX_PATH": "00_blocker.ipynb",
          "ICON_PATH": "00_blocker.ipynb",
          "BLOCKLIST": "00_blocker.ipynb",
-         "host_path": "00_blocker.ipynb",
-         "host_file": "00_blocker.ipynb",
-         "host_file_copy": "00_blocker.ipynb",
-         "host_file_blocked": "00_blocker.ipynb",
+         "host_fp": "00_blocker.ipynb",
+         "host_fp_copy": "00_blocker.ipynb",
+         "host_fp_blocked": "00_blocker.ipynb",
          "Blocker": "00_blocker.ipynb",
-         "WORK": "01_pomodoro.ipynb",
-         "BREAK": "01_pomodoro.ipynb",
-         "POMODOROS": "01_pomodoro.ipynb"}
+         "WORK_TIME": "01_pomodoro.ipynb",
+         "BREAK_TIME": "01_pomodoro.ipynb",
+         "POMODOROS": "01_pomodoro.ipynb",
+         "pomodoro": "01_pomodoro.ipynb"}
 
 modules = ["blocker.py",
            "pomodoro.py"]
