@@ -2,22 +2,26 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"APP_NAME": "00_blocker.ipynb",
-         "REDIRECT": "00_blocker.ipynb",
-         "WIN_PATH": "00_blocker.ipynb",
-         "LINUX_PATH": "00_blocker.ipynb",
-         "ICON_PATH": "00_blocker.ipynb",
-         "BLOCKLIST": "00_blocker.ipynb",
-         "host_fp": "00_blocker.ipynb",
-         "host_fp_copy": "00_blocker.ipynb",
-         "host_fp_blocked": "00_blocker.ipynb",
-         "Blocker": "00_blocker.ipynb",
-         "WORK_TIME": "01_pomodoro.ipynb",
-         "BREAK_TIME": "01_pomodoro.ipynb",
-         "POMODOROS": "01_pomodoro.ipynb",
-         "pomodoro": "01_pomodoro.ipynb"}
+index = {"main": "00_beproductive.ipynb",
+         "parse_arguments": "00_beproductive.ipynb",
+         "in_notebook": "00_beproductive.ipynb",
+         "APP_NAME": "01_blocker.ipynb",
+         "REDIRECT": "01_blocker.ipynb",
+         "WIN_PATH": "01_blocker.ipynb",
+         "LINUX_PATH": "01_blocker.ipynb",
+         "ICON_PATH": "01_blocker.ipynb",
+         "BLOCKLIST": "01_blocker.ipynb",
+         "host_fp": "01_blocker.ipynb",
+         "host_fp_copy": "01_blocker.ipynb",
+         "host_fp_blocked": "01_blocker.ipynb",
+         "Blocker": "01_blocker.ipynb",
+         "WORK_TIME": "02_pomodoro.ipynb",
+         "BREAK_TIME": "02_pomodoro.ipynb",
+         "POMODOROS": "02_pomodoro.ipynb",
+         "pomodoro": "02_pomodoro.ipynb"}
 
-modules = ["blocker.py",
+modules = ["__main__.py",
+           "blocker.py",
            "pomodoro.py"]
 
 doc_url = "https://johannesstutz.github.io/beproductive/"

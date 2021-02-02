@@ -10,6 +10,9 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
+      title: Be Productive
+      url: beproductive.html
+    - output: web,pdf
       title: Website Blocker
       url: blocker.html
     - output: web,pdf
