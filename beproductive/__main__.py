@@ -6,27 +6,38 @@ __all__ = ['main', 'parse_arguments', 'in_notebook']
 from .blocker import *
 from .pomodoro import *
 import argparse
+from time import sleep
 
 # Cell
-def main(action):
+def main(action=None, time=None, break_time=None, pomodoros=None):
     if action == 'block' or action == None:
         blocker = Blocker()
         if blocker.adminrights:
-            blocker.block(notify=True)
+            if time:
+                blocker.block()
+                blocker.notify(f'Websites blocked for {time} minutes.')
+                sleep(time*60)
+                blocker.unblock(notify=True)
+            else:
+                blocker.block(notify=True)
     elif action == 'unblock':
         blocker = Blocker()
         if blocker.adminrights:
             blocker.unblock(notify=True)
     elif action == 'pomodoro':
-        pomodoro()
-    elif action == 'pomodoro_test': # Testing pomodoro functionality with short times
-        pomodoro(1/60, 1/60, 2)
+        pomodoro(work_time=time or WORK_TIME, break_time=break_time or BREAK_TIME, pomodoros=pomodoros or POMODOROS)
 
 # Cell
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Block addictive websites. Study with the Pomodoro technique.")
-    parser.add_argument('action', help='Block or unblock websites, or start a Pomodoro session. ', \
-                        nargs='?', choices=['block', 'unblock', 'pomodoro'])
+    parser.add_argument('action', nargs='?', choices=['block', 'unblock', 'pomodoro'], \
+                        help='Block or unblock websites, or start a Pomodoro session. ')
+    parser.add_argument('time', type=int, nargs='?', \
+                        help='How many minutes should websites be blocked?')
+    parser.add_argument('break_time', type=int, nargs='?', \
+                        help='Length of the break between Pomodoros')
+    parser.add_argument('pomodoros', type=int, nargs='?', \
+                        help='Number of Pomodoros')
     args = parser.parse_args()
     return args
 
@@ -43,4 +54,4 @@ def in_notebook():
 # Cell
 if __name__ == '__main__' and not in_notebook():
     args = parse_arguments()
-    main(args.action)
+    main(args.action, args.time, args.break_time, args.pomodoros)

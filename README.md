@@ -30,38 +30,52 @@ with open(BLOCKLIST) as file:
 ### Windows
 To run the blocker script, **you have to run your command line tool with administrator privileges.**
 
-To block websites:
+Block websites:
 ```
 cd /directory/of/beproductive
-python -m beproductive [block]
+python -m beproductive
 ```
-To unblock all websites:
+Block websites for `x` minutes:
+```
+python -m beproductive block 45
+```
+Unblock all websites:
 ```
 python -m beproductive unblock
 ```
 
-To start a Pomodoro session:
+Start a Pomodoro session:
 ```
 python -m beproductive pomodoro
 ```
 
 ### Linux (and MacOS?)
-To block websites:
+Block websites:
 ```
 cd /directory/of/beproductive
 sudo python -m beproductive [block]
 ```
-To unblock all websites:
+Block websites for `x` minutes:
+```
+sudo python -m beproductive block 45
+```
+Unblock all websites:
 ```
 sudo python -m beproductive unblock
 ```
 
-To start a Pomodoro session:
+Start a Pomodoro session:
 ```
 sudo python -m beproductive pomodoro
 ```
 
+### Pomodoro
 The [Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) feature blocks your defined websites for 25 minutes. It notifies you after the 25 minutes are over and gives you access to all websites for 5 minutes. Although I recommend getting up and stretching instead :) This cycle is repeated 4 times.
+
+You can set custom times. This is how you run 5 Pomodoros of 45 minutes with 10 minute breaks:
+```
+python -m beproductive pomodoro 45 10 5
+```
 
 ## Behind the Scenes
 The script blocks URLs by modifying the `hosts` file. Blocked URLs are redirected to `127.0.0.1`. The script backs up the original `hosts` file. You will not lose any customizations and you can always reset to the original state.

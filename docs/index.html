@@ -93,24 +93,30 @@ nb_path: "index.ipynb"
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Windows">Windows<a class="anchor-link" href="#Windows"> </a></h3><p>To run the blocker script, <strong>you have to run your command line tool with administrator privileges.</strong></p>
-<p>To block websites:</p>
+<p>Block websites:</p>
 
 <pre><code>cd /directory/of/beproductive
-python -m beproductive [block]</code></pre>
-<p>To unblock all websites:</p>
+python -m beproductive</code></pre>
+<p>Block websites for <code>x</code> minutes:</p>
+
+<pre><code>python -m beproductive block 45</code></pre>
+<p>Unblock all websites:</p>
 
 <pre><code>python -m beproductive unblock</code></pre>
-<p>To start a Pomodoro session:</p>
+<p>Start a Pomodoro session:</p>
 
 <pre><code>python -m beproductive pomodoro</code></pre>
-<h3 id="Linux-(and-MacOS?)">Linux (and MacOS?)<a class="anchor-link" href="#Linux-(and-MacOS?)"> </a></h3><p>To block websites:</p>
+<h3 id="Linux-(and-MacOS?)">Linux (and MacOS?)<a class="anchor-link" href="#Linux-(and-MacOS?)"> </a></h3><p>Block websites:</p>
 
 <pre><code>cd /directory/of/beproductive
 sudo python -m beproductive [block]</code></pre>
-<p>To unblock all websites:</p>
+<p>Block websites for <code>x</code> minutes:</p>
+
+<pre><code>sudo python -m beproductive block 45</code></pre>
+<p>Unblock all websites:</p>
 
 <pre><code>sudo python -m beproductive unblock</code></pre>
-<p>To start a Pomodoro session:</p>
+<p>Start a Pomodoro session:</p>
 
 <pre><code>sudo python -m beproductive pomodoro</code></pre>
 
@@ -119,7 +125,10 @@ sudo python -m beproductive [block]</code></pre>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro</a> feature blocks your defined websites for 25 minutes. It notifies you after the 25 minutes are over and gives you access to all websites for 5 minutes. Although I recommend getting up and stretching instead :) This cycle is repeated 4 times.</p>
+<h3 id="Pomodoro">Pomodoro<a class="anchor-link" href="#Pomodoro"> </a></h3><p>The <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro</a> feature blocks your defined websites for 25 minutes. It notifies you after the 25 minutes are over and gives you access to all websites for 5 minutes. Although I recommend getting up and stretching instead :) This cycle is repeated 4 times.</p>
+<p>You can set custom times. This is how you run 5 Pomodoros of 45 minutes with 10 minute breaks:</p>
+
+<pre><code>python -m beproductive pomodoro 45 10 5</code></pre>
 
 </div>
 </div>
