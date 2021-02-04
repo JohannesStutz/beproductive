@@ -69,7 +69,8 @@ nb_path: "00_beproductive.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Testing-main-function">Testing <a href="/beproductive/beproductive.html#main"><code>main</code></a> function<a class="anchor-link" href="#Testing-main-function"> </a></h2>
+<h2 id="Testing-main-function">Testing <a href="/beproductive/beproductive.html#main"><code>main</code></a> function<a class="anchor-link" href="#Testing-main-function"> </a></h2><p>Make sure the main functionality works as expected.</p>
+
 </div>
 </div>
 </div>
@@ -220,6 +221,12 @@ Pomodoro session ended, take a longer break. All websites unblocked.
 <div class="output_markdown rendered_html output_subarea ">
 <h4 id="parse_arguments" class="doc_header"><code>parse_arguments</code><a href="https://github.com/johannesstutz/beproductive/tree/master/beproductive/__main__.py#L31" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>parse_arguments</code>()</p>
 </blockquote>
+<p>Parse arguments from shell. All arguments are optional.
+action: ['block', 'unblock', 'pomodoro']
+time: minutes
+break_time: minutes
+pomodoros: int</p>
+<p>Returns: Namespace</p>
 
 </div>
 
@@ -256,8 +263,9 @@ Pomodoro session ended, take a longer break. All websites unblocked.
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="in_notebook" class="doc_header"><code>in_notebook</code><a href="https://github.com/johannesstutz/beproductive/tree/master/beproductive/__main__.py#L45" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>in_notebook</code>()</p>
+<h4 id="in_notebook" class="doc_header"><code>in_notebook</code><a href="https://github.com/johannesstutz/beproductive/tree/master/beproductive/__main__.py#L54" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>in_notebook</code>()</p>
 </blockquote>
+<p>Returns True if run in a notebook environment.</p>
 
 </div>
 

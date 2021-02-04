@@ -29,6 +29,15 @@ def main(action=None, time=None, break_time=None, pomodoros=None):
 
 # Cell
 def parse_arguments():
+    """
+    Parse arguments from shell. All arguments are optional.
+    action: ['block', 'unblock', 'pomodoro']
+    time: minutes
+    break_time: minutes
+    pomodoros: int
+
+    Returns: Namespace
+    """
     parser = argparse.ArgumentParser(description="Block addictive websites. Study with the Pomodoro technique.")
     parser.add_argument('action', nargs='?', choices=['block', 'unblock', 'pomodoro'], \
                         help='Block or unblock websites, or start a Pomodoro session. ')
@@ -43,6 +52,7 @@ def parse_arguments():
 
 # Cell
 def in_notebook():
+    "Returns True if run in a notebook environment."
     try:
         from IPython import get_ipython
         if 'IPKernelApp' not in get_ipython().config:  # pragma: no cover
