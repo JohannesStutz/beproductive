@@ -4,13 +4,14 @@
 
 ## Install
 
-I'm working on making this program `pip` installable. In the meantime: download all files from the `beproductive` folder and place them in the same directory.
+To install **Be Productive**:
+```pip install beproductive```
 
-If you want to use Pomodoro and use Windows, it's recommended to `pip install win10toast` for [nice Windows notifications](https://github.com/jithurjacob/Windows-10-Toast-Notifications). 
+If you use Windows, it's recommended to `pip install win10toast` for [nice Windows notifications](https://github.com/jithurjacob/Windows-10-Toast-Notifications). 
 
 ![](pomodoro-notification.png)
 
-You don't have to install `win10toast`, but then you will not get visible and audible notifications for Pomodoro. All notifications are also printed in your command line tool however.
+You don't have to install `win10toast`, but without it you will not get visible and audible notifications for Pomodoro. However, all notifications are also printed in your command line interface.
 
 ## Blocked Websites
 
@@ -22,8 +23,8 @@ with open(BLOCKLIST) as file:
     print(" ".join([line.rstrip() for line in file]))
 ```
 
-    twitter.com youtube.com facebook.com instagram.com reddit.com netflix.com amazon.com 
-    
+    twitter.com youtube.com facebook.com instagram.com reddit.com netflix.com amazon.com linkedin.com
+
 
 ## How to Block / Unblock Websites
 
@@ -81,6 +82,5 @@ python -m beproductive pomodoro 45 10 5
 The script blocks URLs by modifying the `hosts` file. Blocked URLs are redirected to `127.0.0.1`. The script backs up the original `hosts` file. You will not lose any customizations and you can always reset to the original state.
 
 ## Roadmap
-- Turn scripts into installable Python package
-- Extend to Linux and MacOS
-- Add ability to schedule or block for specific period of time
+- Make customizing the blocklist easy
+- Set up a schedule, i.e., block websites between 9am and 5pm
