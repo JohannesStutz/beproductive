@@ -15,15 +15,20 @@ You don't have to install `win10toast`, but without it you will not get visible 
 
 ## Blocked Websites
 
-These websites are blocked per default, but you can always edit `blocklist.txt` and add your personal time killers.
+These websites are blocked per default, but you can always edit `blocklist.py` and add your personal time killers.
 
 ```python
-#collapse_input
-with open(BLOCKLIST) as file:
-    print(" ".join([line.rstrip() for line in file]))
+print("\n".join(BLOCKLIST))
 ```
 
-    twitter.com youtube.com facebook.com instagram.com reddit.com netflix.com amazon.com linkedin.com
+    twitter.com
+    youtube.com
+    facebook.com
+    instagram.com
+    reddit.com
+    netflix.com
+    amazon.com
+    linkedin.com
 
 
 ## How to Use

@@ -18,6 +18,9 @@ entries:
     - output: web,pdf
       title: Pomodoro Timer
       url: /pomodoro
+    - output: web,pdf
+      title: Title
+      url: /blocklist
     output: web
     title: beproductive
   output: web
