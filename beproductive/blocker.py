@@ -15,7 +15,7 @@ except:
     win_notify = False
 
 # Cell
-APP_NAME = 'Website Blocker'
+APP_NAME = 'Be Productive'
 REDIRECT = '127.0.0.1'
 WIN_PATH = r'C:\Windows\System32\drivers\etc'
 LINUX_PATH = r'/etc'

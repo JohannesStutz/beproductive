@@ -128,6 +128,29 @@ linkedin.com
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Batch-files">Batch files<a class="anchor-link" href="#Batch-files"> </a></h3><p>For quick access:</p>
+<ol>
+<li>Create batch files for the commands you need.</li>
+<li>Add a shortcut to each batch file to your desktop.</li>
+<li>Right click on the shortcut</li>
+<li>In the <code>Shortcut</code> tab, click <code>Advanced</code></li>
+<li>Check the <code>Run as Administrator</code> box</li>
+<li>You can even add a key binding.</li>
+</ol>
+<p>I used:</p>
+<ul>
+<li>Ctrl + Alt + <strong>B</strong> to block all sites for 1 hour</li>
+<li>Ctrl + Alt + <strong>U</strong> to unblock all sites</li>
+<li>Ctrl + Alt + <strong>P</strong> to run a Pomodoro set</li>
+</ul>
+<p>Example for a batch file <code>block.bat</code>:
+<code>python -m beproductive block 60</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Behind-the-Scenes">Behind the Scenes<a class="anchor-link" href="#Behind-the-Scenes"> </a></h2><p>The script blocks URLs by modifying the <code>hosts</code> file. Blocked URLs are redirected to <code>127.0.0.1</code>. The script backs up the original <code>hosts</code> file. You will not lose any customizations and you can always reset to the original state.</p>
 
 </div>

@@ -66,6 +66,23 @@ You can set custom times. This is how you run 5 Pomodoros of 45 minutes with 10 
 python -m beproductive pomodoro 45 10 5
 ```
 
+### Batch files
+For quick access:
+1. Create batch files for the commands you need.
+2. Add a shortcut to each batch file to your desktop.
+3. Right click on the shortcut
+4. In the `Shortcut` tab, click `Advanced`
+5. Check the `Run as Administrator` box
+6. You can even add a key binding.
+
+I used:
+- Ctrl + Alt + **B** to block all sites for 1 hour
+- Ctrl + Alt + **U** to unblock all sites
+- Ctrl + Alt + **P** to run a Pomodoro set
+
+Example for a batch file `block.bat`:
+```python -m beproductive block 60```
+
 ## Behind the Scenes
 The script blocks URLs by modifying the `hosts` file. Blocked URLs are redirected to `127.0.0.1`. The script backs up the original `hosts` file. You will not lose any customizations and you can always reset to the original state.
 
