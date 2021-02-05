@@ -26,14 +26,17 @@ with open(BLOCKLIST) as file:
     twitter.com youtube.com facebook.com instagram.com reddit.com netflix.com amazon.com linkedin.com
 
 
-## How to Block / Unblock Websites
+## How to Use
 
 ### Windows
-To run the blocker script, **you have to run your command line tool with administrator privileges.**
+You have to open your command line tool with **administrator privileges.**
 
+### Linux (and MacOS?)
+You have to run Be Productive with **root privileges**, either with `sudo` before every command or once with `su`.
+
+### Block / Unblock Websites
 Block websites:
 ```
-cd /directory/of/beproductive
 python -m beproductive
 ```
 Block websites for `x` minutes:
@@ -48,26 +51,6 @@ python -m beproductive unblock
 Start a Pomodoro session:
 ```
 python -m beproductive pomodoro
-```
-
-### Linux (and MacOS?)
-Block websites:
-```
-cd /directory/of/beproductive
-sudo python -m beproductive [block]
-```
-Block websites for `x` minutes:
-```
-sudo python -m beproductive block 45
-```
-Unblock all websites:
-```
-sudo python -m beproductive unblock
-```
-
-Start a Pomodoro session:
-```
-sudo python -m beproductive pomodoro
 ```
 
 ### Pomodoro
