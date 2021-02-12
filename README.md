@@ -51,7 +51,10 @@ python -m beproductive pomodoro -t 45 -b 10 -p 5
 
 ## Blocked Websites
 
-These websites are blocked per default, but you can add and remove websites easily.
+These websites are blocked per default, but you can add and remove websites easily. You can view all blocked websites with this command:
+```
+python -m beproductive [--list/-l]
+```
 
     twitter.com
     youtube.com
@@ -73,11 +76,6 @@ python -m beproductive [--add/-a] quora.com wired.com
 To remove websites from blocklist:
 ```
 python -m beproductive [--remove/-r] quora.com wired.com
-```
-
-To list all blocked websites:
-```
-python -m beproductive [--list/-l]
 ```
 
 ### Batch files
