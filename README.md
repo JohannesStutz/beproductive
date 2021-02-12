@@ -99,5 +99,6 @@ Example for a batch file `block.bat`:
 The script blocks URLs by modifying the `hosts` file. Blocked URLs are redirected to `127.0.0.1`. The script backs up the original `hosts` file. You will not lose any customizations and you can always reset to the original state.
 
 ## Roadmap
-- Make customizing the blocklist easy
+- Notifications for Linux (https://pypi.org/project/notify2/) and Mac (?)
+- Improve architecture, maybe use threads instead of `sleep()`
 - Set up a schedule, i.e., block websites between 9am and 5pm
