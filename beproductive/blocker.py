@@ -19,7 +19,7 @@ APP_NAME = 'Be Productive'
 REDIRECT = '127.0.0.1'
 WIN_PATH = r'C:\Windows\System32\drivers\etc'
 LINUX_PATH = r'/etc'
-NOTIFY_DURATION = 1 # CHANGE TO 5 FOR PRODUCTION
+NOTIFY_DURATION = 5 # CHANGE TO 5 FOR PRODUCTION
 ICON_PATH = 'icon.ico'
 
 if sys.platform == 'win32':

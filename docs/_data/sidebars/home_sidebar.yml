@@ -19,7 +19,7 @@ entries:
       title: Pomodoro Timer
       url: pomodoro.html
     - output: web,pdf
-      title: Title
+      title: Config File Handling
       url: config.html
     output: web
     title: beproductive
