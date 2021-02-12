@@ -4,7 +4,6 @@ __all__ = ['DEFAULT_URLS', 'save_config', 'load_config', 'add_urls', 'remove_url
 
 # Cell
 import yaml
-from fastcore.utils import *
 DEFAULT_URLS = ["twitter.com", "youtube.com", "facebook.com",
     "instagram.com", "reddit.com", "netflix.com",    "amazon.com", "linkedin.com"]
 
@@ -32,7 +31,8 @@ def load_config():
 
 # Cell
 def add_urls(urls):
-    to_add = listify(urls)
+    # Turn into a list if only one URL is given
+    to_add = [urls] if isinstance(urls, str) else urls
     to_add = list(map(str.lower, to_add))
     stored_urls = load_config()
     stored_urls.extend(to_add)
@@ -44,7 +44,7 @@ def add_urls(urls):
 
 # Cell
 def remove_urls(urls):
-    to_remove = listify(urls)
+    to_remove = [urls] if isinstance(urls, str) else urls
     to_remove = list(map(str.lower, to_remove))
     stored_urls = load_config()
     updated_urls = [url for url in stored_urls if url not in to_remove]
