@@ -9,6 +9,7 @@ index = {"main": "00_beproductive.ipynb",
          "REDIRECT": "01_blocker.ipynb",
          "WIN_PATH": "01_blocker.ipynb",
          "LINUX_PATH": "01_blocker.ipynb",
+         "NOTIFY_DURATION": "01_blocker.ipynb",
          "ICON_PATH": "01_blocker.ipynb",
          "host_fp": "01_blocker.ipynb",
          "host_fp_copy": "01_blocker.ipynb",
@@ -18,12 +19,16 @@ index = {"main": "00_beproductive.ipynb",
          "BREAK_TIME": "02_pomodoro.ipynb",
          "POMODOROS": "02_pomodoro.ipynb",
          "pomodoro": "02_pomodoro.ipynb",
-         "BLOCKLIST": "03_blocklist.ipynb"}
+         "DEFAULT_URLS": "03_config.ipynb",
+         "save_config": "03_config.ipynb",
+         "load_config": "03_config.ipynb",
+         "add_urls": "03_config.ipynb",
+         "remove_urls": "03_config.ipynb"}
 
 modules = ["__main__.py",
            "blocker.py",
            "pomodoro.py",
-           "blocklist.py"]
+           "config.py"]
 
 doc_url = "https://johannesstutz.github.io/beproductive/"
 

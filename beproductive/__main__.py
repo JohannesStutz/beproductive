@@ -3,13 +3,16 @@
 __all__ = ['main', 'parse_arguments', 'in_notebook']
 
 # Cell
-from .blocker import *
-from .pomodoro import *
+from .blocker import Blocker
+from .pomodoro import pomodoro
+import beproductive.config as config
 import argparse
 from time import sleep
 
 # Cell
 def main(action=None, time=None, break_time=None, pomodoros=None):
+    if not config.load_config():
+        config.save_config(default=True)
     if action == 'block' or action == None:
         blocker = Blocker()
         if blocker.adminrights:
@@ -39,7 +42,9 @@ def parse_arguments():
     Returns: Namespace
     """
     parser = argparse.ArgumentParser(description="Block addictive websites. Study with the Pomodoro technique.")
-    parser.add_argument('action', nargs='?', choices=['block', 'unblock', 'pomodoro'], \
+    parser.add_argument('action',
+                        nargs='?',
+                        choices=['block', 'unblock', 'pomodoro'],
                         help='Block or unblock websites, or start a Pomodoro session. ')
     parser.add_argument('time', type=int, nargs='?', \
                         help='How many minutes should websites be blocked?')
