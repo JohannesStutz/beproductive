@@ -74,7 +74,7 @@ class Blocker():
             self._raise_permission_error()
             return False
         if notify:
-            self.notify("Websites blocked, enjoy your work")
+            self.notify("Websites blocked, enjoy your work.")
         return "Websites blocked"
 
     def unblock(self, notify=False):
@@ -85,7 +85,7 @@ class Blocker():
             self._raise_permission_error()
             return False
         if notify:
-            self.notify("All websites unblocked, have fun")
+            self.notify("All websites unblocked.")
         return "Websites unblocked"
 
     def notify(self, message, title=APP_NAME, duration=NOTIFY_DURATION):

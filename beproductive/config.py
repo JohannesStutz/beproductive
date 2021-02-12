@@ -40,7 +40,7 @@ def add_urls(urls):
     updated_urls = list(set(stored_urls))
     save_config(updated_urls)
     verb = "has" if len(to_add) == 1 else "have"
-    print(f"{', '.join(to_add)} {verb} been added to blocklist")
+    print(f"{', '.join(to_add)} {verb} been added to the blocklist")
 
 # Cell
 def remove_urls(urls):
@@ -50,7 +50,7 @@ def remove_urls(urls):
     updated_urls = [url for url in stored_urls if url not in to_remove]
     save_config(updated_urls)
     verb = "has" if len(to_remove) == 1 else "have"
-    print(f"{', '.join(to_remove)} {verb} been removed from blocklist")
+    print(f"{', '.join(to_remove)} {verb} been removed from the blocklist")
 
 # Cell
 def show_blocklist():

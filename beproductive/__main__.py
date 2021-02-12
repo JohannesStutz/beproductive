@@ -79,6 +79,10 @@ def in_notebook():
 
 # Cell
 if __name__ == '__main__' and not in_notebook():
+    # If no config file is found, create one with the default URLs
+    if not config.load_config():
+        config.save_config(default=True)
+
     args = parse_arguments()
     if args.add:
         config.add_urls(args.add)
