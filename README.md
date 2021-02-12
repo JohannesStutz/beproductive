@@ -13,24 +13,6 @@ If you use Windows, it's recommended to `pip install win10toast` for [nice Windo
 
 You don't have to install `win10toast`, but without it you will not get visible and audible notifications for Pomodoro. However, all notifications are also printed in your command line interface.
 
-## Blocked Websites
-
-These websites are blocked per default, but you can always edit `blocklist.py` and add your personal time killers.
-
-```python
-print("\n".join(BLOCKLIST))
-```
-
-    twitter.com
-    youtube.com
-    facebook.com
-    instagram.com
-    reddit.com
-    netflix.com
-    amazon.com
-    linkedin.com
-
-
 ## How to Use
 
 ### Windows
@@ -46,7 +28,7 @@ python -m beproductive
 ```
 Block websites for `x` minutes:
 ```
-python -m beproductive block 45
+python -m beproductive block --time 45
 ```
 Unblock all websites:
 ```
@@ -59,11 +41,43 @@ python -m beproductive pomodoro
 ```
 
 ### Pomodoro
-The [Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) feature blocks your defined websites for 25 minutes. It notifies you after the 25 minutes are over and gives you access to all websites for 5 minutes. Although I recommend getting up and stretching instead :) This cycle is repeated 4 times.
+The [Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) feature blocks your defined websites for **25 minutes**. It notifies you to take a break and gives you access to all websites for **5 minutes**. Although I recommend getting up and stretching instead :) This cycle is repeated **4 times**.
 
-You can set custom times. This is how you run 5 Pomodoros of 45 minutes with 10 minute breaks:
+You can customize Pomodoros. This is how you run 5 Pomodoros of 45 minutes with 10 minute breaks:
 ```
-python -m beproductive pomodoro 45 10 5
+python -m beproductive pomodoro --time 45 --breaktime 10 --pomodoros 5
+python -m beproductive pomodoro -t 45 -b 10 -p 5
+```
+
+## Blocked Websites
+
+These websites are blocked per default, but you can add and remove websites easily.
+
+    twitter.com
+    youtube.com
+    facebook.com
+    instagram.com
+    reddit.com
+    netflix.com
+    amazon.com
+    linkedin.com
+    
+
+### Customizing Blocklist
+
+To add websites to the blocklist:
+```
+python -m beproductive [--add/-a] quora.com wired.com
+```
+
+To remove websites from blocklist:
+```
+python -m beproductive [--remove/-r] quora.com wired.com
+```
+
+To list all blocked websites:
+```
+python -m beproductive [--list/-l]
 ```
 
 ### Batch files

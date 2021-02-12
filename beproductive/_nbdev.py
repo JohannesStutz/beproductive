@@ -23,7 +23,8 @@ index = {"main": "00_beproductive.ipynb",
          "save_config": "03_config.ipynb",
          "load_config": "03_config.ipynb",
          "add_urls": "03_config.ipynb",
-         "remove_urls": "03_config.ipynb"}
+         "remove_urls": "03_config.ipynb",
+         "show_blocklist": "03_config.ipynb"}
 
 modules = ["__main__.py",
            "blocker.py",

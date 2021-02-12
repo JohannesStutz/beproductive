@@ -2,6 +2,7 @@
 
 title: Be Productive
 
+
 keywords: fastai
 sidebar: home_sidebar
 
@@ -47,7 +48,44 @@ nb_path: "index.ipynb"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Blocked-Websites">Blocked Websites<a class="anchor-link" href="#Blocked-Websites"> </a></h2><p>These websites are blocked per default, but you can always edit <code>blocklist.py</code> and add your personal time killers.</p>
+<h2 id="How-to-Use">How to Use<a class="anchor-link" href="#How-to-Use"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Windows">Windows<a class="anchor-link" href="#Windows"> </a></h3><p>You have to open your command line tool with <strong>administrator privileges.</strong></p>
+<h3 id="Linux-(and-MacOS?)">Linux (and MacOS?)<a class="anchor-link" href="#Linux-(and-MacOS?)"> </a></h3><p>You have to run Be Productive with <strong>root privileges</strong>, either with <code>sudo</code> before every command or once with <code>su</code>.</p>
+<h3 id="Block-/-Unblock-Websites">Block / Unblock Websites<a class="anchor-link" href="#Block-/-Unblock-Websites"> </a></h3><p>Block websites:</p>
+
+<pre><code>python -m beproductive</code></pre>
+<p>Block websites for <code>x</code> minutes:</p>
+
+<pre><code>python -m beproductive block --time 45</code></pre>
+<p>Unblock all websites:</p>
+
+<pre><code>python -m beproductive unblock</code></pre>
+<p>Start a Pomodoro session:</p>
+
+<pre><code>python -m beproductive pomodoro</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Pomodoro">Pomodoro<a class="anchor-link" href="#Pomodoro"> </a></h3><p>The <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro</a> feature blocks your defined websites for <strong>25 minutes</strong>. It notifies you to take a break and gives you access to all websites for <strong>5 minutes</strong>. Although I recommend getting up and stretching instead :) This cycle is repeated <strong>4 times</strong>.</p>
+<p>You can customize Pomodoros. This is how you run 5 Pomodoros of 45 minutes with 10 minute breaks:</p>
+
+<pre><code>python -m beproductive pomodoro --time 45 --breaktime 10 --pomodoros 5
+python -m beproductive pomodoro -t 45 -b 10 -p 5</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Blocked-Websites">Blocked Websites<a class="anchor-link" href="#Blocked-Websites"> </a></h2><p>These websites are blocked per default, but you can add and remove websites easily.</p>
 
 </div>
 </div>
@@ -55,16 +93,6 @@ nb_path: "index.ipynb"
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BLOCKLIST</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -92,36 +120,15 @@ linkedin.com
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-to-Use">How to Use<a class="anchor-link" href="#How-to-Use"> </a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Windows">Windows<a class="anchor-link" href="#Windows"> </a></h3><p>You have to open your command line tool with <strong>administrator privileges.</strong></p>
-<h3 id="Linux-(and-MacOS?)">Linux (and MacOS?)<a class="anchor-link" href="#Linux-(and-MacOS?)"> </a></h3><p>You have to run Be Productive with <strong>root privileges</strong>, either with <code>sudo</code> before every command or once with <code>su</code>.</p>
-<h3 id="Block-/-Unblock-Websites">Block / Unblock Websites<a class="anchor-link" href="#Block-/-Unblock-Websites"> </a></h3><p>Block websites:</p>
+<h3 id="Customizing-Blocklist">Customizing Blocklist<a class="anchor-link" href="#Customizing-Blocklist"> </a></h3><p>To add websites to the blocklist:</p>
 
-<pre><code>python -m beproductive</code></pre>
-<p>Block websites for <code>x</code> minutes:</p>
+<pre><code>python -m beproductive [--add/-a] quora.com wired.com</code></pre>
+<p>To remove websites from blocklist:</p>
 
-<pre><code>python -m beproductive block 45</code></pre>
-<p>Unblock all websites:</p>
+<pre><code>python -m beproductive [--remove/-r] quora.com wired.com</code></pre>
+<p>To list all blocked websites:</p>
 
-<pre><code>python -m beproductive unblock</code></pre>
-<p>Start a Pomodoro session:</p>
-
-<pre><code>python -m beproductive pomodoro</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Pomodoro">Pomodoro<a class="anchor-link" href="#Pomodoro"> </a></h3><p>The <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro</a> feature blocks your defined websites for 25 minutes. It notifies you after the 25 minutes are over and gives you access to all websites for 5 minutes. Although I recommend getting up and stretching instead :) This cycle is repeated 4 times.</p>
-<p>You can set custom times. This is how you run 5 Pomodoros of 45 minutes with 10 minute breaks:</p>
-
-<pre><code>python -m beproductive pomodoro 45 10 5</code></pre>
+<pre><code>python -m beproductive [--list/-l]</code></pre>
 
 </div>
 </div>

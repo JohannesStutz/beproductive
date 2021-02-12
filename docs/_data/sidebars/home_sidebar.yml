@@ -11,16 +11,16 @@ entries:
       url: /
     - output: web,pdf
       title: Be Productive
-      url: /beproductive
+      url: beproductive.html
     - output: web,pdf
       title: Website Blocker
-      url: /blocker
+      url: blocker.html
     - output: web,pdf
       title: Pomodoro Timer
-      url: /pomodoro
+      url: pomodoro.html
     - output: web,pdf
       title: Title
-      url: /blocklist
+      url: config.html
     output: web
     title: beproductive
   output: web

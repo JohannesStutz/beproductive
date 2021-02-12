@@ -1,9 +1,9 @@
 {
   "beproductive": {
     "Overview": "/",
-    "Be Productive": "/beproductive",
-    "Website Blocker": "/blocker",
-    "Pomodoro Timer": "/pomodoro",
-    "Title": "/blocklist"
+    "Be Productive": "beproductive.html",
+    "Website Blocker": "blocker.html",
+    "Pomodoro Timer": "pomodoro.html",
+    "Title": "config.html"
   }
 }

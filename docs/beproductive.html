@@ -2,6 +2,7 @@
 
 title: Be Productive
 
+
 keywords: fastai
 sidebar: home_sidebar
 
@@ -39,13 +40,6 @@ nb_path: "00_beproductive.ipynb"
     
 <div class="cell border-box-sizing code_cell rendered">
 
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
 <div class="output_wrapper">
 <div class="output">
 
@@ -53,7 +47,7 @@ nb_path: "00_beproductive.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="main" class="doc_header"><code>main</code><a href="https://github.com/johannesstutz/beproductive/tree/master/beproductive/__main__.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>main</code>(<strong><code>action</code></strong>=<em><code>None</code></em>, <strong><code>time</code></strong>=<em><code>None</code></em>, <strong><code>break_time</code></strong>=<em><code>None</code></em>, <strong><code>pomodoros</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="main" class="doc_header"><code>main</code><a href="https://github.com/johannesstutz/beproductive/tree/master/beproductive/__main__.py#L14" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>main</code>(<strong><code>action</code></strong>=<em><code>None</code></em>, <strong><code>time</code></strong>=<em><code>None</code></em>, <strong><code>break_time</code></strong>=<em><code>None</code></em>, <strong><code>pomodoros</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 
 </div>
@@ -66,9 +60,16 @@ nb_path: "00_beproductive.ipynb"
 </div>
     {% endraw %}
 
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Testing-main-function">Testing <a href="/beproductive/beproductive#main"><code>main</code></a> function<a class="anchor-link" href="#Testing-main-function"> </a></h2><p>Make sure the main functionality works as expected.</p>
+<h2 id="Testing-main-function">Testing <a href="/beproductive/beproductive.html#main"><code>main</code></a> function<a class="anchor-link" href="#Testing-main-function"> </a></h2><p>Make sure the main functionality works as expected.</p>
 
 </div>
 </div>
@@ -80,24 +81,10 @@ nb_path: "00_beproductive.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">main</span><span class="p">(</span><span class="s1">&#39;block&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Websites blocked, enjoy your work
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -111,7 +98,24 @@ nb_path: "00_beproductive.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">main</span><span class="p">(</span><span class="s1">&#39;block&#39;</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">60</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">main</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;block&#39;</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">60</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -143,58 +147,10 @@ All websites unblocked, have fun
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">main</span><span class="p">(</span><span class="s1">&#39;unblock&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>All websites unblocked, have fun
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">main</span><span class="p">(</span><span class="s1">&#39;pomodoro&#39;</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">60</span><span class="p">,</span> <span class="n">break_time</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">60</span><span class="p">,</span> <span class="n">pomodoros</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Pomodoro no. 1 of 2 started, work for 0.016666666666666666 minutes
-Pomodoro no. 1 ended, take a 0.016666666666666666 minutes break
-Pomodoro no. 2 of 2 started, work for 0.016666666666666666 minutes
-Pomodoro session ended, take a longer break. All websites unblocked.
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -203,17 +159,10 @@ Pomodoro session ended, take a longer break. All websites unblocked.
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Command-Line-Program">Command Line Program<a class="anchor-link" href="#Command-Line-Program"> </a></h2>
+<h2 id="Command-Line-Program">Command Line Program<a class="anchor-link" href="#Command-Line-Program"> </a></h2><h3 id="Parsing-Arguments">Parsing Arguments<a class="anchor-link" href="#Parsing-Arguments"> </a></h3>
 </div>
 </div>
 </div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -225,7 +174,7 @@ Pomodoro session ended, take a longer break. All websites unblocked.
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="parse_arguments" class="doc_header"><code>parse_arguments</code><a href="https://github.com/johannesstutz/beproductive/tree/master/beproductive/__main__.py#L31" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>parse_arguments</code>()</p>
+<h4 id="parse_arguments" class="doc_header"><code>parse_arguments</code><a href="https://github.com/johannesstutz/beproductive/tree/master/beproductive/__main__.py#L39" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>parse_arguments</code>()</p>
 </blockquote>
 <p>Parse arguments from shell. All arguments are optional.
 action: ['block', 'unblock', 'pomodoro']
@@ -244,6 +193,13 @@ pomodoros: int</p>
 </div>
     {% endraw %}
 
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Little helper function from <a href="https://stackoverflow.com/a/22424821">https://stackoverflow.com/a/22424821</a></p>
@@ -255,13 +211,6 @@ pomodoros: int</p>
     
 <div class="cell border-box-sizing code_cell rendered">
 
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
 <div class="output_wrapper">
 <div class="output">
 
@@ -269,7 +218,7 @@ pomodoros: int</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="in_notebook" class="doc_header"><code>in_notebook</code><a href="https://github.com/johannesstutz/beproductive/tree/master/beproductive/__main__.py#L54" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>in_notebook</code>()</p>
+<h4 id="in_notebook" class="doc_header"><code>in_notebook</code><a href="https://github.com/johannesstutz/beproductive/tree/master/beproductive/__main__.py#L70" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>in_notebook</code>()</p>
 </blockquote>
 <p>Returns True if run in a notebook environment.</p>
 
@@ -283,6 +232,19 @@ pomodoros: int</p>
 </div>
     {% endraw %}
 
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Execution-in-CLI">Execution in CLI<a class="anchor-link" href="#Execution-in-CLI"> </a></h3>
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
